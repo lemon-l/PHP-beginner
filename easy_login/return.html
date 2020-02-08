@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>返回登录界面</title>
+</head>
+<body>
+    注册成功!<br/>
+	5秒后返回登录界面<br/>
+	你也可以直接点击回到<a href="http://127.0.0.1:9096/project/login.html">登录界面</a>
+	<script type="text/javascript">
+		setTimeout("time()",5000);
+		function time()
+		{
+			window.location="http://127.0.0.1:9096/project/login.html";
+		}
+	</script>
+</body>
+</html>

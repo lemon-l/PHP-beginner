@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户注册</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 100%;
+            height: 100%;
+            background: -webkit-linear-gradient(left top, #5baddd, #eb6793);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(bottom right, #5baddd, #eb6793);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(bottom right, #5baddd, #eb6793);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(to bottom right, #5baddd, #eb6793);
+            /* 标准的语法（必须放在最后） */
+            position: fixed;
+        }
+
+        tr,
+        td {
+            padding: 2%;
+        }
+
+        table {
+            /* border: 2px solid #f0f0f0; */
+            width: 300px;
+            height: 250px;
+            background-color: rgb(140, 212, 240);
+            margin-left: 40%;
+            margin-top: 15%;
+        }
+
+        .table_header {
+            font-size: large;
+            color: rgb(132, 0, 255);
+        }
+
+        .label2 {
+            width: 30%;
+            padding-right: 5%;
+            /* padding-left: 5%; */
+            text-align: center;
+        }
+
+        .text2 input {
+            width: 85%;
+        }
+
+        .register {
+            position: relative;
+            background: radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%));
+            text-shadow: 0 -1px 0 #c3af07;
+            color: orangered;
+            border: 1px solid hsl(54, 100%, 20%);
+            border-radius: 100%;
+            height: 40px;
+            width: 50px;
+            z-index: 4;
+            outline: none;
+
+            box-shadow: inset 0 1px 0 hsl(54, 100%, 50%),
+                0 2px 0 hsl(54, 100%, 20%),
+                0 3px 0 hsl(54, 100%, 18%),
+                0 4px 0 hsl(54, 100%, 16%),
+                0 5px 0 hsl(54, 100%, 14%),
+                0 6px 0 hsl(54, 100%, 12%),
+                0 7px 0 hsl(54, 100%, 10%),
+                0 8px 0 hsl(54, 100%, 8%),
+                0 9px 0 hsl(54, 100%, 6%);
+        }
+
+        .register:active {
+            top: 2px;
+            box-shadow: inset 0 1px 0 hsl(54, 100%, 50%),
+                0 2px 0 hsl(54, 100%, 16%),
+                0 3px 0 hsl(54, 100%, 14%),
+                0 4px 0 hsl(54, 100%, 12%),
+                0 5px 0 hsl(54, 100%, 10%),
+                0 6px 0 hsl(54, 100%, 8%),
+                0 7px 0 hsl(54, 100%, 6%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <form method="post" action="register.php">
+            <table>
+                <tr>
+                    <td align="center" colspan="2" class="table_header" class="table_header">用户注册</td>
+                </tr>
+                <tr>
+                    <td class="label2">账号</td>
+                    <td class="text2"><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td class="label2">密码</td>
+                    <td class="text2"><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td class="label2">密码确认</td>
+                    <td class="text2"><input type="password" name="password2"></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2"><input type="submit" value="注册" name="sub" class="register"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

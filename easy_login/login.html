@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户登录</title>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        img,
+        ol,
+        ul,
+        li,
+        form,
+        label,
+        table {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        #box {
+            width: 100%;
+            height: 100%;
+            background: -webkit-linear-gradient(left top, #5baddd, #eb6793);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(bottom right, #5baddd, #eb6793);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(bottom right, #5baddd, #eb6793);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(to bottom right, #5baddd, #eb6793);
+            /* 标准的语法（必须放在最后） */
+            position: fixed;
+        }
+
+        table {
+            /* border: 2px solid #f0f0f0; */
+            width: 300px;
+            background-color: rgb(140, 212, 240);
+            margin-left: 40%;
+            margin-top: 15%;
+        }
+
+        tr,
+        td {
+            padding: 2%;
+        }
+
+        .table_header {
+            font-size: large;
+            color: rgb(132, 0, 255);
+        }
+
+        .label {
+            width: 30%;
+            padding-right: 5%;
+            /* padding-left: 5%; */
+            text-align: center;
+        }
+
+        .text input {
+            width: 85%;
+        }
+
+        .picture {
+            text-align: center;
+        }
+
+        .login {
+            width: 80px;
+            height: 30px;
+            position: relative;
+            background: orangered;
+            border: none;
+            color: white;
+            padding: 10px 5px;
+            outline: none;
+            box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+        }
+
+        /* td{
+            border: greenyellow 1px solid;
+        } */
+        .link {
+            width: 40px;
+            margin-left: 85%;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <form method="post" action="login.php">
+            <table>
+                <tr>
+                    <td align="center" colspan="2" class="table_header">用户登录</td>
+                </tr>
+                <tr>
+                    <td class="label">账号</td>
+                    <td class="text"><input type="text" name="usernamel"></td>
+                </tr>
+                <tr>
+                    <td class="label">密码</td>
+                    <td class="text"><input type="password" name="passwordl"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="picture"><img src="http://127.0.0.1:9096/project/image_captcha.php" onclick="this.src='image_captcha.php?'+new Date().getTime();"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">验证</td>
+                    <td class="text"><input type="text" name="captcha" placeholder="请输入图片中的验证码"></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2"><input type="submit" value="登录" name="subl" class="login"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="link"><a href="http://127.0.0.1:9096/project/register.html">注册</a></div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
